@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HLipinski devlog]]></title><description><![CDATA[Devlog]]></description><link>https://gatsby-starter-blog-demo.netlify.com/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 02 Jun 2019 10:35:16 GMT</lastBuildDate><item><title><![CDATA[Wzorzec Dekorator]]></title><description><![CDATA[Dekorator pozwala na przydzielanie obiektowi nowych właściwości bez dziedziczenia.Przykład użycia tego wzorca znajduje się w JDK w pakiecie…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//dekorator/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//dekorator/</guid><pubDate>Fri, 31 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Dekorator&lt;/strong&gt; pozwala na przydzielanie obiektowi nowych właściwości bez dziedziczenia.&lt;/p&gt;
+&lt;p&gt;Przykład użycia tego wzorca znajduje się w JDK w pakiecie &lt;em&gt;java.io&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/74a95983f59fe91f77db52165f92a01f/bf224/image1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 45.638432364096076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAACTUlEQVQoz42QTUzTYBjH2ylcjJiAHozEeNA7iYk3r3r1ZognvHvRmBgTE08mGA/EBBh+DJHIJEOCoATZxgYCY8I2bDvYd7vSdv3Y3n7so2BZHzs96EGNv+Sff97n482TP6YUPuFCdhFPJ2bwzeXXOJLpI5iDqqKLzWYTKpUKtEAI3WnVFYlt08sMTm5H8IX5WTy6HsRXQh9xnvmKO1PYX/GM+c7ygjig6caAKCnDWzHiMvY/cF8edJTj9zo2Z26emHja2/V2qO/k9MiNrv7bPZ1Ou93R0ZZ7H104fr/v9DGWmry6L4dmEbMwxZBTU9zu7DuGeu9DxcC8ra72YkjczecyVH43mSgoQprm6EQ+n03mchmyUGIJhmcIOrWzXcymtmkmn0yr/MaKUaGBYygoSzTAfgGgEXdCYcHWIk8wAB1+UQOwWpnZP2Wrjh/A75T3NkixtFfmOcbUVFRvqOk6GFEd6nFndfUhZopBd0NccpvSktvg/O70ltediXndqc03I2J2btBG4ceH5WD/NznQr7Pzgzw1fmXu2bVTixO3zvuGrnf7J++eg/rcGWgudAN42/+ZL6BgZzETGU5Ra8+JWPiFUIi8VLiEJ02tj6bI9VeGTHq4fGSUiIXGMjtRD5sKjGMGv+xCbNilccsumQ661vyjrp2t6bbWh1LuwyW1IoAoSqDpVYCmCmZNBqEkgmE48dgG1DQBSs5b02twUGXhj5eZUsjV8kbJ33OoxU27ShxClbTQ3oolZAOWUvz8Q0LWb5lK1IIa4Shp7cth6zviz8qnToBwBgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Diagram 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/74a95983f59fe91f77db52165f92a01f/b9e4f/image1.png&quot;
+        srcset=&quot;/static/74a95983f59fe91f77db52165f92a01f/cf440/image1.png 148w,
+/static/74a95983f59fe91f77db52165f92a01f/d2d38/image1.png 295w,
+/static/74a95983f59fe91f77db52165f92a01f/b9e4f/image1.png 590w,
+/static/74a95983f59fe91f77db52165f92a01f/bf224/image1.png 791w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Dekorator przyjmuje przez kompozycję obiekty dziedziczące z klasy &lt;em&gt;InputStream&lt;/em&gt;, po czym je rozszerza.
+Klasa &lt;em&gt;FilterInputStream&lt;/em&gt; spełnia tutaj 2 funkcje:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;dostarcza pole typu &lt;em&gt;InputStream&lt;/em&gt;, gdzie będzie wstrzyknięty obiekt dekorowany,&lt;/li&gt;
+&lt;li&gt;zapewnia, żeby każdy z dekoratorów był podtypem klasy &lt;em&gt;InputStream&lt;/em&gt; (podobnie jak obiekt dekorowany).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Klasa abstrakcyjna:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Closeable&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Obiekt dekorowany:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ByteArrayInputStream&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dekorator abstrakcyjny:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FilterInputStream&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;volatile&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FilterInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;in &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Implementacja dekoratora:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BufferedInputStream&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FilterInputStream&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	
+	&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;in&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; DEFAULT_BUFFER_SIZE&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        
+	&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; size&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;in&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;size &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Buffer size &amp;lt;= 0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+		buf &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;size&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dzięki zgodności typów (wszystko jest podtypem &lt;em&gt;InputStream&lt;/em&gt;) możemy jeden obiekt dekorować wielokrotnie, czyli:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;LineNumberInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+				&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ByteArrayInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[Mój pierwszy wpis na blogu!
+Więcej ciekawych rzeczy już niebawem.]]></description><link>https://gatsby-starter-blog-demo.netlify.com//hello-world/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//hello-world/</guid><pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Mój pierwszy wpis na blogu!
+Więcej ciekawych rzeczy już niebawem.&lt;/p&gt;</content:encoded></item></channel></rss>
