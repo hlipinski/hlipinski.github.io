@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HLipinski devlog]]></title><description><![CDATA[Devlog]]></description><link>https://gatsby-starter-blog-demo.netlify.com/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 02 Jun 2019 10:35:16 GMT</lastBuildDate><item><title><![CDATA[Wzorzec Dekorator]]></title><description><![CDATA[Dekorator pozwala na przydzielanie obiektowi nowych właściwości bez dziedziczenia.Przykład użycia tego wzorca znajduje się w JDK w pakiecie…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//dekorator/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//dekorator/</guid><pubDate>Fri, 31 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Dekorator&lt;/strong&gt; pozwala na przydzielanie obiektowi nowych właściwości bez dziedziczenia.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HLipinski devlog]]></title><description><![CDATA[Devlog]]></description><link>https://gatsby-starter-blog-demo.netlify.com/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 02 Jun 2019 10:53:31 GMT</lastBuildDate><item><title><![CDATA[Wzorzec Dekorator]]></title><description><![CDATA[Dekorator pozwala na rozszerzanie obiektów bez potrzeby dziedziczenia, dzięki czemu zyskujemy elastyczność w definiowaniu dowolnej ilości…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//dekorator/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//dekorator/</guid><pubDate>Sun, 02 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Dekorator&lt;/strong&gt; pozwala na rozszerzanie obiektów bez potrzeby dziedziczenia, dzięki czemu zyskujemy elastyczność w definiowaniu dowolnej ilości nowych cech.&lt;/p&gt;
 &lt;p&gt;Przykład użycia tego wzorca znajduje się w JDK w pakiecie &lt;em&gt;java.io&lt;/em&gt;:&lt;/p&gt;
 &lt;p&gt;&lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -29,8 +29,7 @@
       /&gt;
   &lt;/span&gt;
   &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Dekorator przyjmuje przez kompozycję obiekty dziedziczące z klasy &lt;em&gt;InputStream&lt;/em&gt;, po czym je rozszerza.
-Klasa &lt;em&gt;FilterInputStream&lt;/em&gt; spełnia tutaj 2 funkcje:&lt;/p&gt;
+&lt;p&gt;Klasa &lt;em&gt;FilterInputStream&lt;/em&gt; spełnia tutaj 2 funkcje:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;dostarcza pole typu &lt;em&gt;InputStream&lt;/em&gt;, gdzie będzie wstrzyknięty obiekt dekorowany,&lt;/li&gt;
 &lt;li&gt;zapewnia, żeby każdy z dekoratorów był podtypem klasy &lt;em&gt;InputStream&lt;/em&gt; (podobnie jak obiekt dekorowany).&lt;/li&gt;
