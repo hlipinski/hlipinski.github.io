@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HLipinski devlog]]></title><description><![CDATA[Devlog]]></description><link>https://gatsby-starter-blog-demo.netlify.com/</link><generator>RSS for Node</generator><lastBuildDate>Tue, 04 Jun 2019 20:28:04 GMT</lastBuildDate><item><title><![CDATA[Git - przydatne rzeczy]]></title><description><![CDATA[Rzeczy, które mogą się przydać w codziennej pracy z tym narzędziem.Ustawienie domyślnego edytora tekstowego:Sublime Text:Atom:Nano:Vim…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//git-przydatne/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//git-przydatne/</guid><pubDate>Tue, 04 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Rzeczy, które mogą się przydać w codziennej pracy z tym narzędziem.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Ustawienie domyślnego edytora tekstowego:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Sublime Text:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global core.editor &lt;span class=&quot;token string&quot;&gt;&quot;subl -n -w&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Atom:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global core.editor &lt;span class=&quot;token string&quot;&gt;&quot;atom --wait&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nano:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global core.editor &lt;span class=&quot;token string&quot;&gt;&quot;nano -w&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vim:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global core.editor &lt;span class=&quot;token string&quot;&gt;&quot;vim&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Notepad++ (Win):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; config --global core.editor &lt;span class=&quot;token string&quot;&gt;&quot;&apos;C:/Program Files (x86)/Notepad++/notepad++.exe&apos; -multiInst -notabbar -nosession -noPlugin&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nadpisanie lokalnych commitów:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jeśli tylko najświeższy commit:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit --amend&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tylko najświeższy commit, ale już wypchnięty:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; commit --amend
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master --force&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kilka commitów, tylko lokalnie:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; rebase -i HEAD~liczba_commitów_wstecz
+&lt;span class=&quot;token comment&quot;&gt;# wybieramy przy odpowiednich commitach opcję &apos;reword&apos;,&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# zapisujemy plik, a później zmieniamy nazwy commitów.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Kilka commitów, już wypchętych:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# najpierw robimy to samo co powyżej, a później:&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master --force&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cofnięcie zmian z remote’a:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; reset --hard HEAD~liczba_commitów_wstecz
+&lt;span class=&quot;token comment&quot;&gt;# zmieniamy co chcemy, commitujemy&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; push origin master --force&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Detached HEAD: jesteśmy w commicie, który nie jest przypisany do żadnego brancha. Aby wrócić do poprzedniego commita możemy zrobić:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout -&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pobranie pliku z innego commita:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout wskaznik_commita -- nazwa_pliku&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Cherry pick:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# oznaczamy commit do pobrania lekkim tagiem&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; tag nazwa_taga
+&lt;span class=&quot;token comment&quot;&gt;# przełączamy się na docelowy branch i pobieramy&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; checkout nazwa_brancha
+&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; cherry-pick nazwa_taga&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tagi:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Dodanie &lt;em&gt;lekkiego&lt;/em&gt; taga:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; tag nazwa_taga &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;commit&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dodanie &lt;em&gt;ciężkiego&lt;/em&gt; taga (zawiera datę, autora i message):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; tag nazwa_taga &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;commit&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; -a -m message&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Usunięcie taga:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; tag -d nazwa_taga&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Wyświetlenie informacji o &lt;em&gt;ciężkim&lt;/em&gt; tagu:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; show&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Fast-forward: kopiuje nam commity do master, bez tworzenia commita z mergem. Możemy to wyłączyć robiąc:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; merge --no-ff&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Czym jest hoisting?]]></title><description><![CDATA[Hoisting jest mechanizmem języka JavaScript polegającym na traktowaniu każdej zmiennej zadeklarowanej słowem kluczowym  tak, jakby była…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//hoisting/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//hoisting/</guid><pubDate>Mon, 03 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Hoisting&lt;/strong&gt; jest mechanizmem języka &lt;em&gt;JavaScript&lt;/em&gt; polegającym na traktowaniu każdej zmiennej zadeklarowanej słowem kluczowym &lt;code class=&quot;language-text&quot;&gt;var&lt;/code&gt; tak, jakby była zadeklarowana na początku danego bloku kodu (lub funkcji).&lt;/p&gt;
+&lt;p&gt;Przykład:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hoistTest&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+hoistTest &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Hoisting test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Powyższy kod wygeneruje nam błąd &lt;code class=&quot;language-text&quot;&gt;ReferenceError: hoistTest is not defined&lt;/code&gt;, co jest spodziewanym zachowaniem: zmienna &lt;code class=&quot;language-text&quot;&gt;hoistTest&lt;/code&gt; nie istnieje w momencie logowania na konsolę.&lt;/p&gt;
+&lt;p&gt;Sytuacja zmieni się, jeśli na końcu dodamy deklarację zmiennej:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hoistTest&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+hoistTest &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Hoisting test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; hoistTest&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Nie dostaniemy już błędu. Teraz po wywołaniu tych linii kodu na konsolę zostanie wypisany &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt;, czyli zmienna istnieje, tylko nie została przypisana jej żadna wartość.
+Dzieje się tak właśnie za sprawą &lt;strong&gt;hoistingu&lt;/strong&gt;. W rzeczywistości, kod który został wykonany w przeglądarce wygląda następująco:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; hoistTest&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hoistTest&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+hoistTest &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Hoisting test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Czyli silnik języka w momencie kompilacji “przeniósł” deklarację zmiennych słowem kluczowym &lt;code class=&quot;language-text&quot;&gt;var&lt;/code&gt; na początek bloku kodu.
+Warto zwrócić uwagę, że hositing działa tylko na &lt;strong&gt;deklarację zmiennych&lt;/strong&gt;, nie ich inicjalizację, dlatego kod:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hoistTest&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; hoistTest &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Hoisting test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;nadal wypisze na konsoli &lt;code class=&quot;language-text&quot;&gt;undefined&lt;/code&gt; i po skompilowaniu będzie wyglądał, jak w bloku kodu powyżej.&lt;/p&gt;
+&lt;p&gt;Mechanizm ten nie jest zbyt intuicyjny, szczególnie jeśli działa w dużych skupiskach linii kodu, przez co generuje błędy i niejasności.&lt;/p&gt;
+&lt;p&gt;Co możemy z tym zrobić?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Deklarować zmienne na początku bloku kodu (lub funkcji).&lt;/li&gt;
+&lt;li&gt;Używać &lt;a href=&quot;https://www.w3schools.com/js/js_strict.asp&quot;&gt;strict mode&lt;/a&gt;, dzięki któremu silnik JS nie pozwoli używać zmiennych przed ich deklaracją.&lt;/li&gt;
+&lt;li&gt;Zamiast &lt;code class=&quot;language-text&quot;&gt;var&lt;/code&gt; używać &lt;code class=&quot;language-text&quot;&gt;let&lt;/code&gt; i &lt;code class=&quot;language-text&quot;&gt;const&lt;/code&gt; z &lt;em&gt;ECMAScript 6&lt;/em&gt;, które nie są poddawane mechanizmowi hoistingu i domyślnie działają tak, jak ich poprzednik w &lt;em&gt;strict mode&lt;/em&gt; z poprzedniego punktu.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Wzorzec Dekorator]]></title><description><![CDATA[Dekorator pozwala na rozszerzanie obiektów bez potrzeby dziedziczenia, dzięki czemu zyskujemy elastyczność w definiowaniu dowolnej ilości…]]></description><link>https://gatsby-starter-blog-demo.netlify.com//dekorator/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//dekorator/</guid><pubDate>Sun, 02 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Dekorator&lt;/strong&gt; pozwala na rozszerzanie obiektów bez potrzeby dziedziczenia, dzięki czemu zyskujemy elastyczność w definiowaniu dowolnej ilości nowych cech.&lt;/p&gt;
+&lt;p&gt;Przykład użycia tego wzorca znajduje się w JDK w pakiecie &lt;em&gt;java.io&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/74a95983f59fe91f77db52165f92a01f/bf224/image1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 45.638432364096076%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAACTUlEQVQoz42QTUzTYBjH2ylcjJiAHozEeNA7iYk3r3r1ZognvHvRmBgTE08mGA/EBBh+DJHIJEOCoATZxgYCY8I2bDvYd7vSdv3Y3n7so2BZHzs96EGNv+Sff97n482TP6YUPuFCdhFPJ2bwzeXXOJLpI5iDqqKLzWYTKpUKtEAI3WnVFYlt08sMTm5H8IX5WTy6HsRXQh9xnvmKO1PYX/GM+c7ygjig6caAKCnDWzHiMvY/cF8edJTj9zo2Z26emHja2/V2qO/k9MiNrv7bPZ1Ou93R0ZZ7H104fr/v9DGWmry6L4dmEbMwxZBTU9zu7DuGeu9DxcC8ra72YkjczecyVH43mSgoQprm6EQ+n03mchmyUGIJhmcIOrWzXcymtmkmn0yr/MaKUaGBYygoSzTAfgGgEXdCYcHWIk8wAB1+UQOwWpnZP2Wrjh/A75T3NkixtFfmOcbUVFRvqOk6GFEd6nFndfUhZopBd0NccpvSktvg/O70ltediXndqc03I2J2btBG4ceH5WD/NznQr7Pzgzw1fmXu2bVTixO3zvuGrnf7J++eg/rcGWgudAN42/+ZL6BgZzETGU5Ra8+JWPiFUIi8VLiEJ02tj6bI9VeGTHq4fGSUiIXGMjtRD5sKjGMGv+xCbNilccsumQ661vyjrp2t6bbWh1LuwyW1IoAoSqDpVYCmCmZNBqEkgmE48dgG1DQBSs5b02twUGXhj5eZUsjV8kbJ33OoxU27ShxClbTQ3oolZAOWUvz8Q0LWb5lK1IIa4Shp7cth6zviz8qnToBwBgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Diagram 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/74a95983f59fe91f77db52165f92a01f/b9e4f/image1.png&quot;
+        srcset=&quot;/static/74a95983f59fe91f77db52165f92a01f/cf440/image1.png 148w,
+/static/74a95983f59fe91f77db52165f92a01f/d2d38/image1.png 295w,
+/static/74a95983f59fe91f77db52165f92a01f/b9e4f/image1.png 590w,
+/static/74a95983f59fe91f77db52165f92a01f/bf224/image1.png 791w&quot;
+        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Klasa &lt;em&gt;FilterInputStream&lt;/em&gt; spełnia tutaj 2 funkcje:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;dostarcza pole typu &lt;em&gt;InputStream&lt;/em&gt;, gdzie będzie wstrzyknięty obiekt dekorowany,&lt;/li&gt;
+&lt;li&gt;zapewnia, żeby każdy z dekoratorów był podtypem klasy &lt;em&gt;InputStream&lt;/em&gt; (podobnie jak obiekt dekorowany).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Klasa abstrakcyjna:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;abstract&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;implements&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Closeable&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Obiekt dekorowany:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ByteArrayInputStream&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dekorator abstrakcyjny:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FilterInputStream&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;volatile&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;protected&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FilterInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;in &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Implementacja dekoratora:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BufferedInputStream&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;FilterInputStream&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	
+	&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;in&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; DEFAULT_BUFFER_SIZE&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+        
+	&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; size&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;super&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;in&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;size &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			&lt;span class=&quot;token keyword&quot;&gt;throw&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Buffer size &amp;lt;= 0&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+		buf &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;size&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Dzięki zgodności typów (wszystko jest podtypem &lt;em&gt;InputStream&lt;/em&gt;) możemy jeden obiekt dekorować wielokrotnie, czyli:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token class-name&quot;&gt;InputStream&lt;/span&gt; in &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;LineNumberInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+		&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;BufferedInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+				&lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;ByteArrayInputStream&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;i to jest prawdziwą potęgą tego wzorca - możemy stworzyc obiekt będący dowolną kombinacją różnych, nadpisanych przez nas zachowań.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Hello World]]></title><description><![CDATA[Mój pierwszy wpis na blogu!
+Więcej ciekawych rzeczy już niebawem.]]></description><link>https://gatsby-starter-blog-demo.netlify.com//hello-world/</link><guid isPermaLink="false">https://gatsby-starter-blog-demo.netlify.com//hello-world/</guid><pubDate>Thu, 30 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Mój pierwszy wpis na blogu!
+Więcej ciekawych rzeczy już niebawem.&lt;/p&gt;</content:encoded></item></channel></rss>
