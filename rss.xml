@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HLipinski devlog]]></title><description><![CDATA[Devlog]]></description><link>https://hlipinski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 15 Jun 2019 20:54:49 GMT</lastBuildDate><item><title><![CDATA[Git - przydatne rzeczy]]></title><description><![CDATA[Rzeczy, które mogą się przydać w codziennej pracy z tym narzędziem.Ustawienie domyślnego edytora tekstowego:Sublime Text:Atom:Nano:Vim…]]></description><link>https://hlipinski.github.io/git-przydatne/</link><guid isPermaLink="false">https://hlipinski.github.io/git-przydatne/</guid><pubDate>Tue, 04 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Rzeczy, które mogą się przydać w codziennej pracy z tym narzędziem.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[HLipinski devlog]]></title><description><![CDATA[Devlog]]></description><link>https://hlipinski.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 15 Jun 2019 22:09:31 GMT</lastBuildDate><item><title><![CDATA[Wzorzec Obserwator]]></title><description><![CDATA[Obserwator pozwala na zdefiniowanie pomiędzy obiektami relacji (jeden do wielu), w której po zmianie stanu wybranego obiektu (Podmiotu…]]></description><link>https://hlipinski.github.io/obserwator/</link><guid isPermaLink="false">https://hlipinski.github.io/obserwator/</guid><pubDate>Sat, 15 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;Obserwator&lt;/strong&gt; pozwala na zdefiniowanie pomiędzy obiektami relacji (jeden do wielu), w której po zmianie stanu wybranego obiektu (Podmiotu) zostają poinformowane wszystkie obiekty powiązane (Obserwatorzy).&lt;/p&gt;
+&lt;p&gt;Zaletą zastosowania tego wzorca jest to, że obiekty Podmiotu i Obserwatorów są ze sobą luźno powiązane: w każdej chwili można dodać lub usunąć obiekt obserwujący, bez wpływu na cały system.&lt;/p&gt;
+&lt;p&gt;W JDK w pakiecie &lt;em&gt;java.io&lt;/em&gt; został dostarczony szkielet (klasa &lt;em&gt;Observable&lt;/em&gt;, interfejs &lt;em&gt;Observer&lt;/em&gt;), który ułatwia implementację tego wzorca:&lt;/p&gt;
+&lt;p&gt;&lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/d48723b331181128c3851e0359f4e302/90647/image1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-wrapper&quot;
+    style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 531px;&quot;
+  &gt;
+    &lt;span
+      class=&quot;gatsby-resp-image-background-image&quot;
+      style=&quot;padding-bottom: 45.38606403013182%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAAB+ElEQVQoz51SO4wSURQdRl01bmxstfFTIfUyYaMWhlCbmNhoQWuiFjYWaEMCgYIKiikIyCaQ0NEBBSF8wyf8CYRfAuEPCRAiYXafz/Nm2UQLLbzJZO7MOe+8e++53GKxoJ1Oh2YymZ/VavViv9/TXq/3ikNQSnk8LOXAebnZbM7S6bQYCATE4XD4fTabfVWpVNcZHolEZB7X7XalWq0mNRoNaT6f7yBA8/n8W4bpdLo7Wq32+CD4jWHT6ZRCjKV0t9v1BEG4yfBsNnsp2O/3aaVSoaiODgYDmYhL3jHM4XAcGY3GG4eL36Pyi9FotARlISHW63UMlx4xPJVKXQrGYrGPoVDog8vl+lKv1z9hBJ+bzeajQ8sK7hDxePzYZrMpPR7Pw2g0et9isShFUXxwhXu9Xu6fgZkq9Ho912q1eMyH/wtNYTKZrqFdPplM8uj0D57i9w8Icf8VqESNFk4MBsNzn88nlEolTTgcvscwvG/lcrkTt9utNpvNGqfTKcDlU4zoNs7dRVWndrtdsFqtGr/frw4Gg2qOECIbMZlM6Ha7vcrfHJx9glUhMIKOx2O6Wq1kHPlTzPoFy2GU7Dwcp2wFuXa7TUAg+EkgdI7VocVi8TUTTCQSjwuFwo9yucxWhWDvzpfLJcU/JVbrGZxn2yGx8xAjOEd+ATk1eEbo6YpIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    &gt;&lt;/span&gt;
+    &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;box-shadow:inset 0px 0px 0px 400px white;&quot;
+        alt=&quot;Diagram 1&quot;
+        title=&quot;&quot;
+        src=&quot;/static/d48723b331181128c3851e0359f4e302/90647/image1.png&quot;
+        srcset=&quot;/static/d48723b331181128c3851e0359f4e302/cf440/image1.png 148w,
+/static/d48723b331181128c3851e0359f4e302/d2d38/image1.png 295w,
+/static/d48723b331181128c3851e0359f4e302/90647/image1.png 531w&quot;
+        sizes=&quot;(max-width: 531px) 100vw, 531px&quot;
+      /&gt;
+  &lt;/span&gt;
+  &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Podmiot powinien dziedziczyć po klasie Observable, a obiekty Obserwatorów implementować Observer. Obiekty obserwujące powiadamiamy metodą &lt;em&gt;notifyObservers()&lt;/em&gt;. Trzeba jednak pamiętać, żeby przed powiadomieniem ustawić flagę, że obiekt rzeczywiście się zmienił, wywołując metodę &lt;em&gt;setChanged()&lt;/em&gt;. Oto dlaczego:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;java&quot;&gt;&lt;pre class=&quot;language-java&quot;&gt;&lt;code class=&quot;language-java&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;notifyObservers&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Object&lt;/span&gt; arg&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+	&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;changed&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    arrLocal &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; obs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toArray&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;clearChanged&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Aktualizacja może przebiegać w dwóch różnych trybach:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Podmiot może wysyłać dane do wszystkich obiektów obserwujących,&lt;/li&gt;
+&lt;li&gt;Podmiot może informować obiekty obserwujące o zmianie, po czym one same mogą pobrać niezbędne dane.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Zaproponowany przez JDK szkielet na również pewne wady, o których trzeba pamiętać: komponent &lt;em&gt;Observable&lt;/em&gt; jest klasą, a dodatkowo, część jej metod jest chroniona więc jesteśmy skazani na dziedziczenie, żeby oznaczyć Podmiot. Przed skorzystaniem z tego szkieletu warto zastanowić się, czy możemy pogodzić się z takim kontraktem, czy sami powinniśmy sobie napisać dużo bardziej elastyczny interfejs &lt;em&gt;Observable&lt;/em&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git - przydatne rzeczy]]></title><description><![CDATA[Rzeczy, które mogą się przydać w codziennej pracy z tym narzędziem.Ustawienie domyślnego edytora tekstowego:Sublime Text:Atom:Nano:Vim…]]></description><link>https://hlipinski.github.io/git-przydatne/</link><guid isPermaLink="false">https://hlipinski.github.io/git-przydatne/</guid><pubDate>Tue, 04 Jun 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Rzeczy, które mogą się przydać w codziennej pracy z tym narzędziem.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;Ustawienie domyślnego edytora tekstowego:&lt;/p&gt;
